@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
@@ -9,10 +10,12 @@ import { ThemeService } from 'src/app/services/theme.service';
 export class MenuComponent implements OnInit {
 
   constructor(private renderer: Renderer2, private el: ElementRef,
-    public themeService: ThemeService) { }
+    public themeService: ThemeService,
+    public authService: AuthService) { }
 
   ngOnInit() {
     this.themeService.applyTheme();
+    console.log(this.isDarkTheme);
   }
 
   openNav() {
@@ -34,8 +37,11 @@ toggleTheme() {
   this.themeService.toggleTheme();
 }
 
-isDarkTheme() {
+isDarkTheme() : boolean {
   return this.themeService.isDarkThemeEnabled();
 }
 
+sairSistema(){
+  this.authService.logout();
+}
 }

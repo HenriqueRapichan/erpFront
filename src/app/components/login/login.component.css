@@ -1,0 +1,28 @@
+.container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fundo{
+    border-radius: 10px;
+    border: 2px solid #dadada;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    width: 330px;
+    height: 500px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.campos button{
+    width: 100%;
+    margin: 10px 0;
+}
+.logo{
+    margin: 10px 0;
+    text-align: center;
+}
+.logo img{
+    width: 150px;
+    height: auto;
+}

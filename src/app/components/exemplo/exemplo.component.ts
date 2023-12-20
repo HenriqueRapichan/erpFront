@@ -14,10 +14,11 @@ export class ExemploComponent implements OnInit {
 
   constructor(private dataService: DataService) {
     // Carrega dados ao inicializar o componente
-    this.loadData();
+    
   }
 
   ngOnInit() {
+    this.loadData();
   }
   // Função assíncrona para carregar dados do backend
   async loadData(): Promise<void> {

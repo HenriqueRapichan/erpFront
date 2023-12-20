@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
   // URL do backend (substitua 'url_do_backend' pela sua URL real)
-  private apiUrl = 'url_do_backend';
+  private apiUrl = 'https://jsonplaceholder.typicode.com';
 
   constructor(private http: HttpClient) {}
 
@@ -14,7 +14,7 @@ export class DataService {
   async getData(): Promise<any[]> {
     try {
       // Faz uma requisição GET para obter dados e aguarda a resposta
-      const response = await this.http.get<any[]>(`${this.apiUrl}/dados`).toPromise();
+      const response = await this.http.get<any[]>(`${this.apiUrl}/posts`).toPromise();
       return response!; // Retorna os dados obtidos do backend
     } catch (error) {
       console.error('Erro ao obter dados do backend', error);
