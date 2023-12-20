@@ -11,7 +11,7 @@
         <div>
           <input type="text" id="usuario" formControlName="usuario">
         </div>
-        <div *ngIf="loginForm.get('usuario')?.hasError('required') && loginForm.get('usuario')?.touched">
+        <div class="alert alert-danger" *ngIf="loginForm.get('usuario')?.hasError('required') && loginForm.get('usuario')?.touched">
           Usuário é obrigatório.
         </div>
       </div>
@@ -22,7 +22,7 @@
         <div>
           <input type="password" id="password" formControlName="password">
         </div>
-        <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+        <div class="alert alert-danger" *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
           Senha é obrigatória.
         </div>
       </div>
