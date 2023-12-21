@@ -1,5 +1,6 @@
 <app-menu></app-menu>
-<div class="grid-Principal">
+<app-carregando *ngIf="carregando"></app-carregando>
+<div class="grid-Principal" *ngIf="!carregando">
   <div *ngFor="let x of data">
     <p>{{x.title}}</p>
   </div>

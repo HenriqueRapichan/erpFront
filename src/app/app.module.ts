@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ReactiveFormsModule, FormsModule  } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { CarregandoComponent } from './components/carregando/carregando.component';
 
 
 
@@ -19,6 +20,7 @@ import { LoginComponent } from './components/login/login.component';
     MenuComponent,
     ExemploComponent,
     LoginComponent,
+    CarregandoComponent,
   ],
   imports: [
     BrowserModule,

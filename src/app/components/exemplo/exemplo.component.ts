@@ -8,9 +8,9 @@ DataService
     styleUrls: ['./exemplo.component.css']
 })
 export class ExemploComponent implements OnInit {
-
+public carregando: boolean = true;
   // Array para armazenar os dados do backend
-  data: any[] = [];
+ public data: any[] = [];
 
   constructor(private dataService: DataService) {
     // Carrega dados ao inicializar o componente
